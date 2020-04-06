@@ -1,0 +1,14 @@
+{
+  "name": "bpi",
+  "version": "1.0.0",
+  "description": "Automata to compute remainder when dividing a number by 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
