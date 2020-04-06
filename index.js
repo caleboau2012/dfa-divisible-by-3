@@ -9,7 +9,9 @@ const table = [
 
 /**
  * Main function of DFA that accepts the number
- * @param {*} num
+ * Note that the ideal input to the DFA is a binary representation.
+ * Doing the computation here for convenience of dealing with decimal values. Can be easily changed.
+ * @param {Number} num
  */
 const isDivisible = (num) => {
   num = Math.floor(num);
@@ -17,7 +19,7 @@ const isDivisible = (num) => {
     num = -num;
   }
   let state = 0;
-  num = getBinaryRepresentation(num);
+  num = getBinaryRepresentation(num); // this is the real input to the DFA. Using this for convenience
 
   for (let i = 0; i < num.length; i++) {
     state = table[state][num[i]];
@@ -28,7 +30,7 @@ const isDivisible = (num) => {
 
 /**
  * This helper method returns the binary representation of the number
- * @param {*} num
+ * @param {Number} num
  */
 const getBinaryRepresentation = (num) => {
   let no = [];
